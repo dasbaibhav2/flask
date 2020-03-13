@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="/static/style.css" type="text/css">
     {% if title %}
-        <title>Sign Up</title>
+        <title>Login</title>
     {% else %}
         <title>Sentimental Analysis</title>
     {% endif %}
@@ -16,10 +16,10 @@
         {% block content %}
             <form action="/register" method="POST">
                 {{ form.hidden_tag() }}
-                <div class="login">
-                    <div class="login-screen">
+                <div class="Register">
+                    <div class="register-screen">
                         <div class="app-title">
-                            <h1>Sign Up</h1>
+                            <h1>Login</h1>
                         </div>
                         <div class="form-group">
                             {{ form.username.label(class="form-control-label") }}
@@ -34,10 +34,8 @@
                                 {{ form.username(class="form-control form-control-lg") }}
                             {% endif %}
                         </div>
-
                         <div class="form-group">
                             {{ form.email.label(class="form-control-label") }}
-        
                             {% if form.email.errors %}
                                 {{ form.email(class="form-control form-control-lg is-invalid") }}
                                 <div class="invalid-feedback">
@@ -49,7 +47,6 @@
                                 {{ form.email(class="form-control form-control-lg") }}
                             {% endif %}
                         </div>
-
                         <div class="form-group">
                             {{ form.password.label(class="form-control-label") }}
                             {% if form.password.errors %}
